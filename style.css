@@ -1,0 +1,131 @@
+html, body {
+      # overflow: hidden;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      background: linear-gradient(to bottom right, #e0f7ff, #f3e5f5);
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: #333;
+    }
+body {
+      max-width: 720px;
+      margin: 0 auto;
+      # padding: 2rem;
+
+      z-index: 1;
+    }
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* 根据需要调整大小 */
+    height: auto; /* 保持图片比例 */
+  }
+
+    /* 右下角大镰刀锤子图片 */
+html::before {
+      content: "";
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 25vw;
+      height: 25vw;
+      max-width: 500px;
+      max-height: 500px;
+      background: url('./image/background.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #4a148c;
+      margin-bottom: 2rem;
+    }
+
+.folder {
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #ffffffcc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+.folder:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+.folder-name {
+      font-size: 1.2rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      background: linear-gradient(to right, #64b5f6, #ba68c8);
+      color: white;
+      border-radius: 8px 8px 0 0;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+.folder-name:hover {
+      filter: brightness(1.1);
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+    }
+
+    .arrow.open {
+      transform: rotate(90deg);
+    }
+
+    .file-list {
+      display: none;
+      padding: 0.5rem 1.5rem 1rem 1.5rem;
+      list-style: none;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .file-list li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .file-list a {
+      text-decoration: none;
+      color: #3949ab;
+      margin: 0 0.3rem;
+    }
+
+    .file-list a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
